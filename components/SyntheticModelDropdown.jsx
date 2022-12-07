@@ -29,7 +29,7 @@ const SyntheticModelDropdown = ({ setSyntheticModel, syntheticModel }) => {
                 <div className="grid grid-flow-col">
                   {syntheticModel.icon}
 
-                  <p className="font-bold text-base mr-12 ml-4">
+                  <p className="font-bold text-sm mr-12 ml-4">
                     {syntheticModel.title}
                   </p>
                 </div>
