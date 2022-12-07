@@ -29,7 +29,7 @@ const SideMenu = ({
   const [ticks, setTicks] = useState(5);
   const [wagerAmountError, setWagerAmountError] = useState(false);
   const [currentWalletBalance, setCurrentWalletBalance] = useState(
-    parseMoney(10000.0)
+    10000.0.toFixed(2)
   );
   const [callPrice, setCallPrice] = useState(0.0);
   const [putPrice, setPutPrice] = useState(0.0);
@@ -73,7 +73,7 @@ const SideMenu = ({
       currentBalance.data !== undefined &&
       currentBalance.data !== null
     ) {
-      setCurrentWalletBalance(parseMoney(currentBalance.data["currentBalance"]));
+      setCurrentWalletBalance(currentBalance.data["currentBalance"].toFixed(2));
     }
   }, [blueIconTransition, redIconTransition, currentBalance.data]);
 
