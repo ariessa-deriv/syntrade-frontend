@@ -64,23 +64,21 @@ const Trade = () => {
           <>
             <div className="block lg:hidden xl:hidden 2xl:hidden sm:block min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:block md:place-items-center">
               <div className="mx-auto max-w-max">
-                <main className="sm:flex sm:text-center">
-                  <ExclamationTriangleIcon
-                    fill="#f87171"
-                    className="w-12 h-12"
-                    aria-hidden="true"
-                  />
-                  <div className="sm:ml-6">
-                    <div className="sm:border-l sm:border-gray-200 sm:pl-6">
-                      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Unsupported Screen Size
-                      </h1>
-                      <p className="mt-4 text-base text-gray-500">
-                        {"We're currently not supporting trading in small screen sizes."}
-                      </p>
-                    </div>
-                  </div>
-                </main>
+                <ExclamationTriangleIcon
+                  fill="#f87171"
+                  className="w-12 h-12 mx-auto"
+                  aria-hidden="true"
+                />
+                <div className="mt-8 mx-auto">
+                  <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl text-center">
+                    Unsupported Screen Size
+                  </h1>
+                  <p className="mt-4 text-base text-gray-500">
+                    {
+                      "We're currently not supporting trading in small screen sizes."
+                    }
+                  </p>
+                </div>
               </div>
             </div>
             <div
