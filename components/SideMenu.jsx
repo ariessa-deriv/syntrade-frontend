@@ -375,6 +375,13 @@ const SideMenu = ({
               wagerAmountError={wagerAmountError}
             >
               <button
+                disabled={
+                  loader ||
+                  (callPrice > 30000 && wagerType == "stake") ||
+                  callPrice == null ||
+                  blueIconTransition ||
+                  redIconTransition
+                }
                 className={`px-4 py-4 rounded w-full grid grid-cols-2 focus:outline-none ${
                   loader ||
                   (callPrice > 30000 && wagerType == "stake") ||
@@ -456,6 +463,13 @@ const SideMenu = ({
               wagerAmountError={wagerAmountError}
             >
               <button
+                disabled={
+                  loader ||
+                  (putPrice > 30000 && wagerType == "stake") ||
+                  putPrice == null ||
+                  blueIconTransition ||
+                  redIconTransition
+                }
                 className={`px-4 py-4 rounded w-full grid grid-cols-2 focus:outline-none ${
                   loader ||
                   (putPrice > 30000 && wagerType == "stake") ||

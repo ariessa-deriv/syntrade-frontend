@@ -138,6 +138,7 @@ const Trade = () => {
                 syntheticModel={syntheticModel}
                 setOpenTradeSuccessModal={setOpenTradeSuccessModal}
                 setOpenLogInNeededModal={setOpenLogInNeededModal}
+                setOpenTradeErrorModal={setOpenTradeErrorModal}
               ></SideMenu>
             </div>
           </>

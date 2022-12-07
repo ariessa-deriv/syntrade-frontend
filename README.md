@@ -1,15 +1,30 @@
 <h1 align="center">Syntrade Frontend</h1>
 
 <p align="center">  
-🌼 Syntrade Frontend is a NextJS app</a>.
+🌼 Syntrade Frontend is a NextJS app. 
 </p>
+</br>
+
+<p align="center">
+<img src="/previews/trade_page.png"/>
+</p>
+
+<p align="center">
+<img src="/previews/reports_page.png"/>
+</p>
+
+<p align="center">
+<img src="/previews/trade_page_small_screens.png"/>
+</p>
+
 </br>
 
 ## Technologies Used
 
 - [NextJS](https://nextjs.org/)
-- [React](https://reactjs.org/)
+- [ReactJS](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [TradingView Lightweight Charts](https://www.tradingview.com/lightweight-charts/)
 
 </br>
 
