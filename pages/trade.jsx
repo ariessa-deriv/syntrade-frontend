@@ -59,14 +59,25 @@ const Trade = () => {
       </Head>
       <main>
         {loader ? (
-          <SkeletonLoaderTradePage />
+          <>
+            <SkeletonLoaderTradePage />
+            <div className="block lg:hidden xl:hidden 2xl:hidden sm:block min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:block md:place-items-center">
+              <div className="mx-auto max-w-max">
+                <div className="animate-pulse w-24 h-24 mx-auto bg-gray-300 border-gray-300 rounded"></div>
+                <div className="mt-8">
+                  <div className="mx-auto animate-pulse mt-8 py-2 px-4 h-8 w-80 bg-gray-300 rounded border-4 border-gray-300 focus:outline-none cursor-default select-none" />
+                  <div className=" mx-auto animate-pulse mt-8 py-2 px-4 h-6 w-96 bg-gray-300 rounded border-4 border-gray-300 focus:outline-none cursor-default select-none" />
+                </div>
+              </div>
+            </div>
+          </>
         ) : (
           <>
             <div className="block lg:hidden xl:hidden 2xl:hidden sm:block min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:block md:place-items-center">
               <div className="mx-auto max-w-max">
                 <ExclamationTriangleIcon
                   fill="#f87171"
-                  className="w-12 h-12 mx-auto"
+                  className="w-24 h-24 mx-auto"
                   aria-hidden="true"
                 />
                 <div className="mt-8 mx-auto">
