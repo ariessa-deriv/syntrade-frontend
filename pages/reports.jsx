@@ -218,14 +218,18 @@ const Reports = () => {
                               </dt>
                               <dd
                                 className={`mt-1 truncate text-gray-500 sm:hidden font-semibold ${
-                                  trade.transaction_amount < 0
-                                    ? "text-red-500"
-                                    : "text-green-500"
+                                  trade.transaction_type == "sell"
+                                    ? trade.transaction_amount < 0
+                                      ? "text-red-500"
+                                      : "text-green-500"
+                                    : "text-red-500"
                                 } `}
                               >
-                                {trade.transaction_amount > 0
-                                  ? `+${parseMoney(trade.transaction_amount)}`
-                                  : `${parseMoney(trade.transaction_amount)}`}
+                                {trade.transaction_type == "sell"
+                                  ? trade.transaction_amount < 0
+                                    ? `${parseMoney(trade.transaction_amount)}`
+                                    : `+${parseMoney(trade.transaction_amount)}`
+                                  : `-${parseMoney(trade.transaction_amount)}`}
                               </dd>
                             </dl>
                           </td>
@@ -286,14 +290,18 @@ const Reports = () => {
                           <td
                             id="profit_loss_col"
                             className={`hidden px-3 py-4 text-sm lg:table-cell md:table-cell font-semibold text-right ${
-                              trade.transaction_amount < 0
-                                ? "text-red-500"
-                                : "text-green-500"
+                              trade.transaction_type == "sell"
+                                ? trade.transaction_amount < 0
+                                  ? "text-red-500"
+                                  : "text-green-500"
+                                : "text-red-500"
                             }`}
                           >
-                            {trade.transaction_amount > 0
-                              ? `+${parseMoney(trade.transaction_amount)}`
-                              : `${parseMoney(trade.transaction_amount)}`}
+                            {trade.transaction_type == "sell"
+                              ? trade.transaction_amount < 0
+                                ? `${parseMoney(trade.transaction_amount)}`
+                                : `+${parseMoney(trade.transaction_amount)}`
+                              : `-${parseMoney(trade.transaction_amount)}`}
                           </td>
                           <td
                             id="balance_col"
